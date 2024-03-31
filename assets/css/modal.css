@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url('../img/nature-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    border-radius: 15px;
+    background-color: white;
+    height: 20rem;
+    width: 50rem;
+    text-align: center;
+}
+.banner > h1 {
+    margin-top: 5rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.banner > .btn-modal {
+    border: 3px solid green;
+    color: green;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: .7rem 1.5rem;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .7s;
+    letter-spacing: 5px;
+}
+.banner > .btn-modal:hover {
+    background-color: green;
+    color: white;
+    z-index: 999;
+}
+
+/* modal */
+.popModal {
+    background-color: rgba(40, 184, 24, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.popModal > .contentModal {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popModal > .contentModal > h3 {
+    border-radius: 20px;
+    background-color: white;
+    height: 15rem;
+    width: 50rem;
+    margin-left: 25px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popModal > .contentModal > .btn-close {
+    font-size: 30px;
+    position: relative;
+    /* top: 0; */
+    bottom: 5rem;
+    right: 3rem;
+    border: none;
+    background-color: white;
+    color: red;
+    transition: .7s;
+}
+.popModal > .contentModal > .btn-close:hover {
+    transform: scale(1.5) rotate(180deg);
+}
+@media screen and (max-width: 500px) {
+    .hero > .banner > h1 {
+        font-size: 3rem;
+    }
+}
