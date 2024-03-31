@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+nav > h1 {
+    font-family: "Workbench", sans-serif;
+    color: tomato;
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+    font: 150;
+    box-shadow: 0 .1px 10px black;
+}
+#formColor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#formColor h3 {
+    padding: 2rem;
+    font-size: 50px;
+    border-radius: 10px;
+    margin-top: 10rem;
+
+    background-color: black;
+    color: white;
+}
+#formColor .colorBg span {
+    color: aqua;
+}
+#formColor #button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1.2s;
+}
+#formColor #button:hover {
+    background-color: black;
+    color: white;
+    transition: 1.2s;
+}
