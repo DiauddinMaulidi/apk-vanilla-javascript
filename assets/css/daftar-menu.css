@@ -46,35 +46,58 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
 }
-.content .item {
+.content .item .content-item {
     display: flex;
     align-items: center;
 }
-.content .item .image img {
+.content .item .content-item .image img {
     width: 200px;
     object-fit: cover;
     border: 3px solid #5356FF;
     border-radius: 10px;
 }
-.content .item .deskripsi {
+.content .item .content-item .deskripsi {
     padding: 15px;
 }
-@media screen and (max-width: 1050px) {
+.content .item .content-item .deskripsi .title-harga {
+    display: flex;
+    justify-content: space-between;
+}
+.content .item .content-item .deskripsi .title-harga p {
+    color: #67C6E3;
+}
+@media screen and (max-width: 1000px) {
+    .container .content {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    .container .content .item {
+        text-align: center;
+    }
+    .content .item .content-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .content .item .content-item .image img {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 700px) {
     .container .content {
         display: grid;
         grid-template-columns: 1fr;
         padding: 5rem 2rem;
     }
-    .content .item {
+    .content .item .content-item {
         display: flex;
         flex-direction: column;
     }
-    .content .item .image img {
+    .content .item .content-item .image img {
         width: 100%;
         border: 2px solid #5356FF;
         border-radius: 10px;
     }
-    .content .item .deskripsi {
+    .content .item .content-item .deskripsi {
         text-align: center;
     }
 }
