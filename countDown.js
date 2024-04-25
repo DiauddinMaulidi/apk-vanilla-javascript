@@ -4,27 +4,37 @@ let hour = document.querySelector('.container .content .content-item .time ul li
 let min = document.querySelector('.container .content .content-item .time ul li .min')
 let sec = document.querySelector('.container .content .content-item .time ul li .sec')
 
-let tngglGiveAway = new Date("30 april 2024 11:30:00").getTime()
 
-let contentTimer = setInterval(() => {
-    let now = new Date().getTime()
+window.addEventListener('DOMContentLoaded', function() {
+    waktu()
+})
 
-    let selisih = tngglGiveAway - now
+function waktu() {
+    let contentTimer = setInterval(() => {
+        let tngglGiveAway = new Date("30 april 2024 11:30:00").getTime()
+        let now = new Date().getTime()
     
-    let days = Math.floor(selisih / (1000 * 60 * 60 * 24))
-    let hours = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    let minutes = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((selisih % (1000 * 60)) / 1000);
+        let selisih = tngglGiveAway - now
+        
+        let days = Math.floor(selisih / (1000 * 60 * 60 * 24))
+        let hours = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        let minutes = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((selisih % (1000 * 60)) / 1000);
+        
+        day.innerHTML = days
+        hour.innerHTML = hours
+        min.innerHTML = minutes
+        sec.innerHTML = seconds
+        
+        if( selisih < 0 ) {
+            clearInterval(contentTimer)
+            day.innerHTML = "EXPIRED"
+        }
     
-    day.innerHTML = days
-    hour.innerHTML = hours
-    min.innerHTML = minutes
-    sec.innerHTML = seconds
+        // let dtk = Math.floor(now % (1000 * 60) / 1000)
+        // console.log(dtk);
+        
+    }, 1000);
 
-    if( selisih < 0 ) {
-        clearInterval(contentTimer)
-        day.innerHTML = "EXPIRED"
-    }
-    // console.log(selisih);
-    
-}, 500);
+    return contentTimer
+}
