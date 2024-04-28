@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', function() {
         
         if( selisih < 0 ) {
             clearInterval(contentTimer)
-            day.innerHTML = "EXPIRED"
+            giveAway.innerHTML = "EXPIRED"
         }
         
     }, 10);
